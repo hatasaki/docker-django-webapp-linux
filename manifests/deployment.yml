@@ -4,6 +4,9 @@ metadata:
   name: djangoapp 
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: djangoapp
   template:
     metadata:
       labels:
