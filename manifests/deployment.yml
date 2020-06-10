@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: djangoapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: djangoapp 
+    spec:
+      containers:
+        - name: djangoapp 
+          image: akscrg.azurecr.io/djangoapp
+          ports:
+          - containerPort: 8000
